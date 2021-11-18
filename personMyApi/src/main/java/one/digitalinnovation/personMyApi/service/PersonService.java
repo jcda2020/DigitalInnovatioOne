@@ -1,11 +1,13 @@
 package one.digitalinnovation.personMyApi.service;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+
 import one.digitalinnovation.personMyApi.dto.request.PersonDTO;
 import one.digitalinnovation.personMyApi.dto.response.MessageResponseDTO;
 import one.digitalinnovation.personMyApi.entity.Person;
 import one.digitalinnovation.personMyApi.exception.PersonNotFoundException;
-import one.digitalinnovation.personMyApi.mapper.PersonMapper;
+import one.digitalinnovation.personMyApi.dto.mapper.PersonMapper;
 import one.digitalinnovation.personMyApi.repository.PersonRepository;
 
 
@@ -17,13 +19,14 @@ import java.util.stream.Collectors;
 
 @Service
 //@AllArgsConstructor(onConstructor = @__(@Autowired))
+@AllArgsConstructor 
 public class PersonService {
 
     private PersonRepository personRepository;
 	
 
     
-    @Autowired
+    @Autowired    
     public PersonService(PersonRepository personRepository) {
     	this.personRepository = personRepository; 
     	

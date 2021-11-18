@@ -1,6 +1,8 @@
 package one.digitalinnovation.personMyApi.controller;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.RequiredArgsConstructor;
 import one.digitalinnovation.personMyApi.dto.response.MessageResponseDTO;
 import one.digitalinnovation.personMyApi.exception.PersonNotFoundException;
 import one.digitalinnovation.personMyApi.repository.PersonRepository;
@@ -26,12 +28,14 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/people")
-//@AllArgsConstructor(onConstructor = @__(@Autowired)) 
+//@AllArgsConstructor(onConstructor = @__(@Autowired))
+@RequiredArgsConstructor
+@AllArgsConstructor 
 public class PersonController {
 
     private PersonService personService;
     
-    @Autowired
+    @Autowired    
     public PersonController(PersonService personService) {
     	this.personService = personService;
     	

@@ -8,6 +8,7 @@ import javax.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import one.digitalinnovation.personMyApi.enums.PhoneType;
 
@@ -15,6 +16,7 @@ import one.digitalinnovation.personMyApi.enums.PhoneType;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class PhoneDTO {
 
 	private Long id;
